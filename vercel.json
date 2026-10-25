@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run generate",
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/admin",
+      "permanent": false,
+      "preserveQueryParams": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/server-pages-preview/:type*",
+      "destination": "/200.html"
+    }
+  ]
+}
